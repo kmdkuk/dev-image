@@ -1,0 +1,3 @@
+[submodule "MyDotFiles"]
+	path = MyDotFiles
+	url = https://github.com/kmdkuk/MyDotFiles.git

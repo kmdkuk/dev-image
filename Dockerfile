@@ -2,10 +2,10 @@ FROM ubuntu:focal
 
 WORKDIR /root
 RUN apt-get update && \
-  apt-get install -y build-essential git vim tmux zsh curl wget hub
+  apt-get install -y git vim tmux zsh curl wget hub
 
-RUN  git clone https://github.com/kmdkuk/MyDotFiles.git && \
-  cd MyDotFiles && \
+COPY MyDotFiles MyDotFiles
+RUN  cd MyDotFiles && \
   ./setup.sh && \
   ./setup_prezto.sh; exit 0
 
